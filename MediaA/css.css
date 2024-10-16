@@ -1,0 +1,130 @@
+* {
+    margin: 0; /* Essa linha serve para falar que as configurações base de margem não existem, para não atrapalhar atribuições futuras */
+    padding: 0; /* Essa linha serve para falar que as configurações base de padding não existem, para não atrapalhar atribuições futuras */
+    box-sizing: border-box;
+    border-color: white; /* Cor da borda (obviamente) que ficou branca, nesse caso.   */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Tipo de fonte do site inteiro (menos o footer, eu acho) */
+    background-color: #1a1a1a; /* Fundo escuro */
+    color: #e0e0e0; /* Texto claro para contraste */
+    line-height: 1.6; /* Altura das linhas (obviamente) */
+}
+
+
+ul.nav {
+    display: flex; /* Define o estilo do comportamento dos componentes da section, nesse caso ele está definido como flex */
+    justify-content: space-between; /* Responsável por fazer a caixa (e o conteúdo dentro) preencher todo o espaço */
+    padding: 10px; /* margin: 10px; /* Margem de 10px*/
+    background-color: #333; /* Fundo do nav escuro */
+    border-radius: 5px; /* Deixa a borda redonda */
+}
+
+li {
+    list-style: none; /* Tira os marcadores do li */
+}
+
+li a {
+    color: #00FFFF; /* Cor do texto em li em aqua */
+    text-decoration: none; /* tira as decorações do texto (obviamente) */
+    padding: 10px; /* Distancia entre a borda e o conteúdo de 10px */
+}
+
+li a:hover {
+    color: white; /* Texto em hover */
+    background-color: rgba(0, 255, 255, 0.2); /* Fundo aqua em hover */
+    border-radius: 5px; 
+}
+
+main {
+    padding: 20px;
+}
+h1,
+h2 {
+    text-align: center; /* Alinha o texto com base no centro (obviamente) */
+    margin: 20px 0; 
+    color: #00FFFF; /* Cabeçalhos em aqua */
+}
+
+.profile-image,
+.project-image {
+    display: block; /* Serve para dizer que só esse elemento (nesse caso, a imagem) ficará o ocupando essa parte do setor */
+    margin: 0 auto; /* Diz que a margem (se não foi definida anteriormente) é 0 */
+    max-width: 100%; /*Diz que a imagem pode ocupar toda a largura que ela possui*/
+    height: auto; /* Diz que a altura é definida pela altura da própria imagem */
+    border-radius: 8px; /* Deixa a borda redonda */
+}
+
+#D1,
+#D2,
+#Contato {
+    margin: 20px 0; /* Isso define que a margem superior e inferior são ambas 20px, e que as margens de esquerda e direita não existem */
+}
+
+section {
+    background-color: #2a2a2a; /* Fundo escuro para as seções */
+    padding: 20px;/*Distancia entre a borda e o conteúdo de 20px */
+    border-radius: 8px; /* Deixa a borda redonda */
+    margin-bottom: 20px; /* Diz que a margem inferior é de 20px */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Sombra clara */
+}
+
+.project-image {
+    display: block; /* Serve para dizer que só esse elemento (nesse caso, a imagem) ficará o ocupando essa parte do setor */
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Sombra clara para a imagem */
+    filter: brightness(0.9); /* Mantém a imagem um pouco mais escura */
+}
+
+p {
+    text-align: center; /* Alinha o texto com base no centro (obviamente) */
+}
+
+#Contato {
+    text-align: center; 
+}
+
+footer {
+    background: #333; /* Fundo do footer escuro */
+    color: white; /* Deixa a cor desse texto branca */
+    text-align: center; /* Alinha o texto com base no centro (obviamente) */
+    padding: 15px 0;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 600px) {
+    ul.nav {
+        flex-direction: column; /* Define o flex como coluna */
+        align-items: center; /* Alinha o texto com base no centro (obviamente) */
+    }
+
+    li {
+        margin: 5px 0;  /* Isso define que a margem superior e inferior são ambas 5px, e que as margens de esquerda e direita não existem */
+    }
+}
+@media (max-width: 768px) {
+    ul.nav {
+        flex-direction: column; /* Menu vertical */
+        align-items: center; /* Alinha os itens no centro */
+    }
+
+    li {
+        margin: 10px 0; /* Espaço entre os itens do menu */
+    }
+
+    body {
+        font-size: 16px; /* Ajusta o tamanho da fonte para melhorar a leitura em telas menores */
+    }
+
+    h1, h2 {
+        font-size: 24px; /* Reduz o tamanho dos cabeçalhos */
+    }
+
+    p {
+        font-size: 14px; /* Ajusta o tamanho dos parágrafos */
+    }
+}
